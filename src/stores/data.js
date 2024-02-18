@@ -9,10 +9,17 @@ export const useDataStore = defineStore('data', () => {
     number.value++
   }
   // controls the title show or not
-  let titlesShow = ref(true) 
+  let titlesShow = ref(0) 
   // Change title show or not
   function switchTitleShow () {
-    titlesShow.value = !titlesShow.value
+    const temp = titlesShow.value
+    titlesShow.value = 1
+    setTimeout(() => {
+      if (temp == 0) {
+        titlesShow.value = 2
+      }
+      else titlesShow.value = 0
+    }, 1000);
   }
   // backgroundPosition
   let backgroundPosition = ref('50% 100%')
