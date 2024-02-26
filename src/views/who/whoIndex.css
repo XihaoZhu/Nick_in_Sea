@@ -1,0 +1,37 @@
+.who {
+  position: absolute;
+  display: grid;
+  grid-template-areas: 
+  "A B"
+  "C D";
+  left: calc(50% - 25vw);
+  top: calc(50% - 40vh);
+  width: 50vw;
+  height: 50vh;
+  background-color: pink;
+  transition: all 1s;
+
+  .education {
+    grid-area: A;
+    border-radius: 2vh;
+    background-color: red;
+  }
+
+  .undifined1 {
+    background-color: blue;
+    border-radius: 2vh;
+    grid-area: B;
+  }
+
+  .workHistory {
+    background-color: yellow;
+    border-radius: 2vh;
+    grid-area: C;
+  }
+
+  .undifined2 {
+    background-color: green;
+    border-radius: 2vh;
+    grid-area: D;
+  }
+}

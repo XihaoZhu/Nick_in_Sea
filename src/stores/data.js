@@ -26,5 +26,12 @@ export const useDataStore = defineStore('data', () => {
   function switchBackgroundPosition (a) {
     backgroundPosition.value=a
   }
-  return { number, next, titlesShow, switchTitleShow, backgroundPosition, switchBackgroundPosition }
+
+  // click to get back to titles
+  function getBack () {
+    switchBackgroundPosition('50% 100%')
+    switchTitleShow()
+  }
+
+  return { number, next, titlesShow, switchTitleShow, backgroundPosition, switchBackgroundPosition, getBack }
 })
