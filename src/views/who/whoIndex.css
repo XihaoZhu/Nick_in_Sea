@@ -1,37 +1,81 @@
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.zIndex {
+  z-index: 2;
+}
+
+.hidden:hover {
+  display: block;
+}
+
 .who {
   position: absolute;
   display: grid;
-  grid-template-areas: 
-  "A B"
-  "C D";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
   left: calc(50% - 25vw);
   top: calc(50% - 40vh);
   width: 50vw;
   height: 50vh;
-  background-color: pink;
+  /* background-color: pink; */
   transition: all 1s;
 
-  .education {
-    grid-area: A;
-    border-radius: 2vh;
-    background-color: red;
-  }
-
-  .undifined1 {
+  .name {
+    grid-column: 1/2;
+    grid-row: 1/2;
     background-color: blue;
     border-radius: 2vh;
-    grid-area: B;
+    width: auto;
+  }
+
+  .education {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center; 
+    justify-content: center; 
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-radius: 2vh;
+    backdrop-filter: blur(2px) brightness(75%);
+    background-color: rgba(0, 0, 0, .1);
+    line-height: 2 ;
+    font-size: 1.2vw;
+    color: aliceblue;
+    .title {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 6vw;
+      font-family: fantasy;
+      color: rgba(160, 160, 160, 0.2);
+      span {
+        display: inline-block;
+        max-width: 0;
+      }
+    }
+  }
+  .education:hover .hidden {
+    opacity: 1;
+    max-width: 100%;
   }
 
   .workHistory {
+    grid-column: 1/2;
+    grid-row: 2/3;
     background-color: yellow;
     border-radius: 2vh;
-    grid-area: C;
   }
 
-  .undifined2 {
+  .undefined {
+    grid-column: 2/3;
+    grid-row: 2/3;
     background-color: green;
     border-radius: 2vh;
-    grid-area: D;
   }
 }
