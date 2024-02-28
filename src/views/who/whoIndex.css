@@ -24,11 +24,37 @@
   transition: all 1s;
 
   .name {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center; 
+    justify-content: center; 
     grid-column: 1/2;
     grid-row: 1/2;
-    background-color: blue;
     border-radius: 2vh;
-    width: auto;
+    backdrop-filter: blur(2px) brightness(75%);
+    background-color: rgba(111, 177, 252, .2);
+    line-height: 2 ;
+    font-size: 1.2vw;
+    color: aliceblue;
+    .title {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 6vw;
+      font-family: fantasy;
+      color: rgba(160, 160, 160, 0.5);
+      span {
+        display: inline-block;
+        max-width: 0;
+      }
+    }
+  }
+  .name:hover .hidden {
+    opacity: 1;
+    max-width: 100%;
   }
 
   .education {
@@ -41,7 +67,7 @@
     grid-row: 1/2;
     border-radius: 2vh;
     backdrop-filter: blur(2px) brightness(75%);
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(224, 224, 224, .2);
     line-height: 2 ;
     font-size: 1.2vw;
     color: aliceblue;
@@ -53,7 +79,7 @@
       transform: translate(-50%, -50%);
       font-size: 6vw;
       font-family: fantasy;
-      color: rgba(160, 160, 160, 0.2);
+      color: rgba(160, 160, 160, 0.5);
       span {
         display: inline-block;
         max-width: 0;
@@ -68,14 +94,68 @@
   .workHistory {
     grid-column: 1/2;
     grid-row: 2/3;
-    background-color: yellow;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center; 
+    justify-content: center; 
     border-radius: 2vh;
+    backdrop-filter: blur(2px) brightness(75%);
+    background-color: rgba(156, 204, 101, .2);
+    line-height: 2 ;
+    font-size: 1.2vw;
+    color: aliceblue;
+    .title {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 6vw;
+      font-family: fantasy;
+      color: rgba(160, 160, 160, 0.5);
+      span {
+        display: inline-block;
+        max-width: 0;
+      }
+    }
+  }
+  .workHistory:hover .hidden {
+    opacity: 1;
+    max-width: 100%;
   }
 
-  .undefined {
+  .hobby {
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: green;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center; 
+    justify-content: center; 
     border-radius: 2vh;
+    backdrop-filter: blur(2px) brightness(75%);
+    background-color: rgba(255, 213, 79, .2);
+    line-height: 2 ;
+    font-size: 1.2vw;
+    color: aliceblue;
+    .title {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 6vw;
+      font-family: fantasy;
+      color: rgba(160, 160, 160, 0.5);
+      span {
+        display: inline-block;
+        max-width: 0;
+      }
+    }
+  }
+  .hobby:hover .hidden {
+    opacity: 1;
+    max-width: 100%;
   }
 }
