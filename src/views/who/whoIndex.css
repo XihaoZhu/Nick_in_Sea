@@ -158,4 +158,20 @@
     opacity: 1;
     max-width: 100%;
   }
+
+}
+
+.backButton {
+  width: 100vw;
+  height: 10vh;
+  background: linear-gradient(to bottom, rgba(169, 169, 169, 0), rgb(169,169,169,0.5));
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  transition: all 1s;
+  cursor: pointer;
+}
+.backButton:hover {
+  height: 15vh;
+  background: linear-gradient(to bottom, rgba(169, 169, 169, 0), rgb(169,169,169,0.8));
 }

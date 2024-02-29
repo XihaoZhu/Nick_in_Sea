@@ -70,7 +70,7 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <div class="backButton" @click="dataStore.getBack()">Clike to take you back for now</div>
+  <div class="backButton" @click="dataStore.getBack()"></div>
   </div>
 </template>
 
