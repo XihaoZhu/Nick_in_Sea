@@ -1,6 +1,7 @@
 <script setup>
   import { useDataStore } from "./stores/data"
   import whoPart from './views/who/whoIndex.vue'
+  import whatPart from './views/what/whatIndex.vue'
 
   let dataStore = useDataStore()
   const directions=[["Who","50% 0"],["What","80% 100%"],["Why","20% 100%"],["Where","50% 100%"],[]];
@@ -25,10 +26,7 @@
     <whoPart ></whoPart>
 
     <!-- what page -->
-    <div class="what" v-show="(dataStore.titlesShow == 2)&&dataStore.number==2">
-      <div class="content"></div>
-    <div class="backButton" @click="dataStore.getBack()">Clike to take you back for now</div>
-    </div>
+    <whatPart></whatPart>
 
     <!-- why page -->
     <div class="what" v-show="(dataStore.titlesShow == 2)&&dataStore.number==3">

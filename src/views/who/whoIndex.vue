@@ -75,4 +75,4 @@ onMounted(() => {
 </template>
 
 
-<style src="./whoIndex.css"></style>
+<style src="./whoIndex.css" scoped></style>
