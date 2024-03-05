@@ -54,7 +54,7 @@
   }
   .name:hover .hidden {
     opacity: 1;
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .education {
@@ -88,7 +88,7 @@
   }
   .education:hover .hidden {
     opacity: 1;
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .workHistory {
@@ -122,7 +122,7 @@
   }
   .workHistory:hover .hidden {
     opacity: 1;
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .hobby {
@@ -156,7 +156,7 @@
   }
   .hobby:hover .hidden {
     opacity: 1;
-    max-width: 100%;
+    max-width: 100% !important;
   }
 }
 
