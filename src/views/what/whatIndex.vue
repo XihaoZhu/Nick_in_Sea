@@ -4,14 +4,22 @@ import { onMounted } from "vue"
 
 let dataStore = useDataStore()
 
+function getMouseLocation(e){
+  return [e.clientX,e.clientY]
+}
 
 onMounted(()=>{
   const test = document.querySelector('.test')
-  function changePosition(){
-  test.style.top='50px'
-  test.style.backgroundPosition='50px 50px'
-  }
-  test.addEventListener("click",()=>changePosition())
+  const parent = document.querySelector('.what')
+  document.addEventListener('mousemove',(e)=>{
+    const location = getMouseLocation(e);
+    const parentRect = parent.getBoundingClientRect();
+    const top = location[1] - parentRect.top;
+    const left = location[0] - parentRect.left;
+    test.style.top = `calc(${top}px - 5vw)`;
+    test.style.left = `calc(${left}px - 5vw)`;
+    test.style.backgroundPosition= `calc(-${left}px + 5vw) calc(-${top}px + 5vw)`;
+  })
 }
 )
 

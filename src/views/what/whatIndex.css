@@ -7,10 +7,9 @@
   /* background-color: pink; */
   transition: all 1s;
   background-color: pink;
+  overflow: hidden;
   .test {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 10vw;
     height: 10vw;
     background-image: url('../../assets/Atest.png');
