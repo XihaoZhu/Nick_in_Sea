@@ -18,8 +18,8 @@ onMounted(()=>{
     const top = location[1] - parentRect.top;
     const left = location[0] - parentRect.left;
     container.style.transform = `translate(calc(${left}px - 5vw),calc(${top}px - 5vw))`;
-    test.style.left = `calc(- ${left}px + 5vw)`;
-    test.style.top = `calc(- ${top}px + 5vw)`;
+    test.style.right = `calc( ( ${left}px - 5vw ) )`;
+    test.style.bottom = `calc( ( ${top}px - 5vw ) )`;
   })
 }
 )

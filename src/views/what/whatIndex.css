@@ -8,13 +8,12 @@
   background-color: pink;
   overflow: hidden;
   .container {
-    /* overflow: hidden; */
-    position: relative;
+    overflow: hidden;
     width: 10vw;
     height: 10vw;
     background-color: rgba(0,0,0,0.3);
       .test {
-        position: absolute;
+        position: relative;
         width: 50vw;
         height: 50vh;
         background-image: url('../../assets/Atest.png');
