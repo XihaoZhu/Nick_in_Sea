@@ -12,7 +12,7 @@
     position: absolute;
     width: 20vw;
     height: 20vw;
-    background-image: url(../../assets/filter.png);
+    background-image: url('../../assets/filter.png');
     background-size: contain;
   }
   .container {
@@ -24,7 +24,6 @@
         width: 60vw;
         height: 30vw;
         background: url('../../assets/Atest.png');
-        opacity: 0.75;
         background-size: 60vw 30vw;
         background-repeat: no-repeat,no-repeat;
       }
