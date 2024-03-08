@@ -12,14 +12,16 @@ onMounted(()=>{
   const container = document.querySelector('.container')
   const parent = document.querySelector('.what')
   const test = document.querySelector('.test')
+  const filter = document.querySelector('.filter')
   document.addEventListener('mousemove',(e)=>{
     const location = getMouseLocation(e);
     const parentRect = parent.getBoundingClientRect();
     const top = location[1] - parentRect.top;
     const left = location[0] - parentRect.left;
-    container.style.transform = `translate(calc(${left}px - 5vw),calc(${top}px - 5vw))`;
-    test.style.right = `calc( ( ${left}px - 5vw ) )`;
-    test.style.bottom = `calc( ( ${top}px - 5vw ) )`;
+    container.style.transform = `translate(calc(${left}px - 7.5vw),calc(${top}px - 7.5vw))`;
+    test.style.right = `calc( ( ${left}px - 7.5vw ) )`;
+    test.style.bottom = `calc( ( ${top}px - 7.5vw ) )`;
+    filter.style.transform = `translate(calc(${left}px - 7.5vw),calc(${top}px - 7.5vw))`;
   })
 }
 )
@@ -29,6 +31,9 @@ onMounted(()=>{
 <template>
   <div v-show="(dataStore.titlesShow == 2)&&dataStore.number==2">
     <div class="what">
+      <div class="filter">
+
+      </div>
       <div class="container">
         <div class="test">
 

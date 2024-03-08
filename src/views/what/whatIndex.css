@@ -1,24 +1,32 @@
 .what {
   position: relative;
-  left: 40vw;
-  top: 25vh;
-  width: 50vw;
-  height: 50vh;
+  left: 30vw;
+  top: calc( 50vh - 15vw);
+  width: 60vw;
+  height: 30vw;
   transition: all 1s;
-  background-color: pink;
+  /* background-color: pink; */
   overflow: hidden;
+  .filter {
+    z-index: 2;
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    background-image: url(../../assets/filter.png);
+    background-size: contain;
+  }
   .container {
     overflow: hidden;
-    width: 10vw;
-    height: 10vw;
-    background-color: rgba(0,0,0,0.3);
+    width: 20vw;
+    height: 20vw;
       .test {
         position: relative;
-        width: 50vw;
-        height: 50vh;
-        background-image: url('../../assets/Atest.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        width: 60vw;
+        height: 30vw;
+        background: url('../../assets/Atest.png');
+        opacity: 0.75;
+        background-size: 60vw 30vw;
+        background-repeat: no-repeat,no-repeat;
       }
   }
 }
