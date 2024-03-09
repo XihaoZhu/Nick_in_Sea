@@ -12,6 +12,8 @@ let dataStore = useDataStore()
             Nick
             Happy
             Juicy
+            ???
+            bulabula
           </div>
         </div>
         <div class="container"></div>
