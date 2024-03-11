@@ -8,6 +8,56 @@
   }
 }
 
+@keyframes moveDown {
+  from {
+    transform: translate(0,calc(10vw - 100%));
+  }
+
+  to {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes colorFlow {
+  0% {
+    border-image-source: linear-gradient(45deg,rgb(148, 250, 156), rgb(158, 190, 255), rgb(255, 169, 243));
+  }
+  25% {
+    border-image-source: linear-gradient(135deg,rgb(148, 250, 156), rgb(158, 190, 255), rgb(255, 169, 243));
+  }
+  50% {
+    border-image-source: linear-gradient(225deg,rgb(148, 250, 156), rgb(158, 190, 255), rgb(255, 169, 243));
+  }
+  75% {
+    border-image-source: linear-gradient(315deg,rgb(148, 250, 156), rgb(158, 190, 255), rgb(255, 169, 243));
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+
+
+.why::before{
+  content: '';
+  opacity: 0;
+  width: 60vw;
+  height: 10vw;
+  position: absolute;
+  top: 10vw;
+  left: -0.5vw;
+  border: 0.5vw dashed;
+  border-image: linear-gradient(45deg,rgb(148, 250, 156), rgb(158, 190, 255), rgb(255, 169, 243));
+  border-image-slice: 1;
+  animation: flash 1s 13s ease 5 forwards,
+             colorFlow 5s infinite;
+}
+
 .why {
   position: relative;
   right: -10vw;
@@ -16,26 +66,35 @@
   height: 30vw;
   display: flex;
   justify-content: space-between;
-  background-color: pink;
   .container {
     display: inline-block;
-    mask-image: linear-gradient(transparent 10%,black 50%, transparent 90%);
+    mask-image: linear-gradient(transparent 15%,black 50%, transparent 85%);
     height: 30vw;
     width: 18vw;
-    background-color: red;
+    backdrop-filter: blur(2px) brightness(75%);
+    background-color: rgba(189, 196, 181, 0.2);
+    border: solid 0.2vw black;
     .words {
-      position: absolute;
+      position: relative;
       display: inline-block;
       width: 18vw;
       top: 10vw;
       left: 0;
-      font-size: xx-large;
-      color: blue;
-      font-size: 5vw;
+      color: white;
+      text-shadow: 0 0 1vw yellow;
+      font-size: 3vw;
       line-height: 10vw;
       text-align: center;
-      background-color: black;
-      animation: moveUp 5s linear 1 forwards;
+    }
+    .words.first{
+      animation: moveUp 10s linear 2s 1 forwards;
+    }
+    .words.second{
+      transform: translate(0,calc(10vw - 100%));
+      animation: moveDown 10s linear 2.5s 1 forwards;
+    }
+    .words.third{
+      animation: moveUp 10s linear 3s 1 forwards;
     }
   }
 }
