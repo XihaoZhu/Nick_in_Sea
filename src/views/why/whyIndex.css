@@ -74,6 +74,7 @@
     backdrop-filter: blur(2px) brightness(75%);
     background-color: rgba(189, 196, 181, 0.2);
     border: solid 0.2vw black;
+    overflow: hidden;
     .words {
       position: relative;
       display: inline-block;

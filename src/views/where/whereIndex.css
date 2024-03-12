@@ -1,0 +1,15 @@
+.what {
+  position: relative;
+  left: 20vw;
+  top: calc(50vh - 15vw);
+  background-color: pink;
+  width: 60vw;
+  height: 30vw;
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    height: 30vw;
+  }
+}

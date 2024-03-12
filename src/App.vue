@@ -3,6 +3,7 @@
   import whoPart from './views/who/whoIndex.vue'
   import whatPart from './views/what/whatIndex.vue'
   import whyPart from './views/why/whyIndex.vue'
+  import wherePart from './views/where/whereIndex.vue'
 
   let dataStore = useDataStore()
   const directions=[["Who","50% 0"],["What","80% 100%"],["Why","20% 100%"],["Where","50% 100%"],[]];
@@ -33,10 +34,7 @@
     <whyPart></whyPart>
 
     <!-- where page -->
-    <div class="what" v-show="(dataStore.titlesShow == 2)&&dataStore.number==4">
-      <div class="content"></div>
-    <div class="backButton" @click="dataStore.getBack()">Clike to take you back for now</div>
-    </div>
+    <wherePart></wherePart>
     
 </div>
 </template>
