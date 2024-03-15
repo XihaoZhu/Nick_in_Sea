@@ -9,6 +9,9 @@ let dataStore = useDataStore()
 <template>
   <div class="what" v-show="(dataStore.titlesShow == 2)&&dataStore.number==4">
       <div class="content">
+        Email (prefer): xihao.zhu@outlook.com 
+        <br>
+        TEL: 07536245732
         <iframe
          width="100%"
          height="100%"

@@ -1,11 +1,23 @@
+@keyframes moveUp {
+  from {
+    transform: translate(0,120%);
+  }
+  to {
+    transform: translate(0,0);
+  }
+}
+
 .what {
   position: relative;
   left: 20vw;
   top: calc(50vh - 15vw);
-  background-color: pink;
   width: 60vw;
   height: 30vw;
+  animation: moveUp 3s linear forwards ;
   .content {
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgb(39, 36, 36);
     position: absolute;
     top: 0;
     left: 0;

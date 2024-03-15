@@ -17,6 +17,7 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   transition: all 1s;
+  overflow: hidden;
   .direction {
     cursor: pointer;
     padding: 0 5vw;
