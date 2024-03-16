@@ -8,9 +8,16 @@
   let dataStore = useDataStore()
   const directions=[["Who","50% 0"],["What","80% 100%"],["Why","20% 100%"],["Where","50% 100%"],[]];
   function handleClick(){
+    if (dataStore.number != 3) {
     dataStore.switchBackgroundPosition(directions[dataStore.number][1])
     dataStore.switchTitleShow();
     dataStore.next();
+    }
+    else {
+        document.querySelector('.background').classList.add('newBackground');
+        dataStore.switchTitleShow();
+        dataStore.next();
+    }
   }
 
 
