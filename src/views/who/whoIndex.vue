@@ -29,7 +29,7 @@ onMounted(() => {
           <h3>Xiaho Zhu</h3>
           <span>Offcial registered name, appears on my passport, ID, student card, railcard, tesco club card, and etc. </span>
           <h3>Nick</h3>
-          <span>A fake name, which can be modified anytime. Be used when I make crimes or when facing people who don't speak mandarin.</span>
+          <span>A fake name, which can be modified anytime. It's used when I commit crimes or when I face people who don't speak Mandarin.</span>
           </div>
       </div>
     </div>
@@ -63,9 +63,9 @@ onMounted(() => {
       <div class="content">
         <div class="title">H<span class="hidden">obby</span></div>
         <div class="hidden zIndex">
-          <h3>I know nobody is interested in, just need 4 blocks for appearance here.</h3>
-          <span>Vedio games : I'm a big fan of League of Legends, and I also play many other games, both online and PC.</span><br>
-          <span>Gym : I hate gym but I want fitness, I'm trying to persuade myself it's one of my hobbies.</span><br>
+          <h3>I know nobody is interested, just need 4 blocks for appearance here.</h3>
+          <span>Video games : I'm a big fan of League of Legends, and I also play many other games, both online and PC.</span><br>
+          <span>Gym : I hate gym but I want fitness, I'm trying to persuade myself that it's one of my hobbies.</span><br>
         </div>
       </div>
     </div>
