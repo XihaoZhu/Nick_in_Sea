@@ -112,6 +112,17 @@
   transition: all 1s;
   cursor: pointer;
 }
+.backButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5vw;
+  height: 5vw;
+  background-image: url('../../assets/arrow.png');
+  background-size: cover;
+  transform: translate(-50%, -100%) rotate(-90deg);
+}
 .backButton:hover {
   width: 15vw;
   background: linear-gradient(to right, rgba(169, 169, 169, 0), rgb(169,169,169,0.8));
